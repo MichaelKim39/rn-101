@@ -27,8 +27,26 @@
       "favicon": "./assets/favicon.png"
     },
     "packagerOpts": {
-      "sourceExts": [ "js", "json", "ts", "tsx", "jsx", "vue"],
+      "sourceExts": [
+        "js",
+        "json",
+        "ts",
+        "tsx",
+        "jsx",
+        "vue"
+      ],
       "config": "metro.config.js"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fb2042e8-0063-4ffe-aa46-599c81b0c6d7"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/fb2042e8-0063-4ffe-aa46-599c81b0c6d7"
     }
   }
 }
