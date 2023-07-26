@@ -3,7 +3,7 @@ on: push
 
 jobs:
   update:
-    name: EAS Update
+    name: Test & EAS Update
     runs-on: ubuntu-latest
     steps:
       - name: Check for EXPO_TOKEN
@@ -31,5 +31,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Publish update
+      - name: '🧪 Run tests'
+        run: yarn test
+
+      - name: '🙈 Generate code coverage'
+        run: yarn test-coverage
+
+      - name: '📍 Publish update'
         run: eas update --auto

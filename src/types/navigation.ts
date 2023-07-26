@@ -1,3 +1,6 @@
+import { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
+import { DrawerScreenProps } from "@react-navigation/drawer";
+import { CompositeScreenProps, NavigatorScreenParams } from "@react-navigation/native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 export enum Routes {
@@ -24,13 +27,13 @@ export type DrawerParams = {
 export type StackParams = {
   [Routes.Home]: undefined;
   [Routes.Other]: undefined;
-  [Routes.Drawer]: undefined;
-  [Routes.Tab]: undefined;
-};
+  [Routes.Drawer]: NavigatorScreenParams<DrawerParams>;
+  [Routes.Tab]: NavigatorScreenParams<TabParams>;
+}
 
 export type HomeScreenProps = NativeStackScreenProps<StackParams, Routes.Home>;
 export type OtherScreenProps = NativeStackScreenProps<StackParams, Routes.Other>;
-export type DrawerOneScreenProps = NativeStackScreenProps<DrawerParams, Routes.DrawerOne>;
-export type DrawerTwoScreenProps = NativeStackScreenProps<DrawerParams, Routes.DrawerTwo>;
-export type TabOneScreenProps = NativeStackScreenProps<TabParams, Routes.TabOne>;
-export type TabTwoScreenProps = NativeStackScreenProps<TabParams, Routes.TabTwo>;
+export type DrawerOneScreenProps = CompositeScreenProps<DrawerScreenProps<DrawerParams, Routes.DrawerOne>, NativeStackScreenProps<StackParams>>;
+export type DrawerTwoScreenProps = DrawerScreenProps<DrawerParams, Routes.DrawerTwo>;
+export type TabOneScreenProps = BottomTabScreenProps<TabParams, Routes.TabOne>;
+export type TabTwoScreenProps = BottomTabScreenProps<TabParams, Routes.TabTwo>;
