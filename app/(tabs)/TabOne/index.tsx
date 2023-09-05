@@ -1,9 +1,15 @@
+import { Tabs } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
-import { TabTwoScreenProps } from 'types/navigation';
+import { Routes } from '../../../types/navigation';
 
-export const TabTwoScreen = ({ navigation }: TabTwoScreenProps) => (
+const TabOne = () => (
   <View style={styles.container}>
-    <Text>Tab 2 Screen</Text>
+    <Tabs.Screen
+      options={{
+        title: Routes.TabOne,
+      }}
+    />
+    <Text>Tab 1 Screen</Text>
   </View>
 );
 
@@ -15,3 +21,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default TabOne;

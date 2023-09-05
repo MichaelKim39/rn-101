@@ -31,10 +31,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: '🧪 Run tests'
-        run: yarn test
-
-      - name: '🙈 Generate code coverage'
+      - name: '🙈 Run tests with coverage'
         run: yarn test-coverage
 
       - name: '📍 Publish update'

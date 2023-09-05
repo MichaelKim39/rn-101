@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { TabOneScreenProps } from 'types/navigation';
+import { Link } from 'expo-router';
 
-export const TabOneScreen = ({ navigation }: TabOneScreenProps) => (
+const Other = () => (
   <View style={styles.container}>
-    <Text>Tab 1 Screen</Text>
+    <Text>Other Screen</Text>
+    <Link href="/pages/DrawerOne/">Navigate to Drawer One Page</Link>
   </View>
 );
 
@@ -15,3 +16,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default Other;

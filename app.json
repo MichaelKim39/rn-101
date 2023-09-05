@@ -1,7 +1,9 @@
 {
   "expo": {
+    "owner": "very-nice-org",
     "name": "rn-101",
-    "slug": "rn-101",
+    "slug": "rn-101-michael",
+    "scheme": "rn-101-michael",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -39,14 +41,17 @@
     },
     "extra": {
       "eas": {
-        "projectId": "fb2042e8-0063-4ffe-aa46-599c81b0c6d7"
+        "projectId": "60e67c0b-a1f7-47d0-a333-a6c740179975"
       }
     },
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
     "updates": {
-      "url": "https://u.expo.dev/fb2042e8-0063-4ffe-aa46-599c81b0c6d7"
+      "url": "https://u.expo.dev/60e67c0b-a1f7-47d0-a333-a6c740179975"
+    },
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
