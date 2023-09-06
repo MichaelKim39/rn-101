@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text } from 'react-native';
+import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { PostType } from '../types';
 import { ImageBackground } from 'expo-image';
 import { getHeightStyle } from '../../../styles/layout';
@@ -23,14 +23,21 @@ const Post = ({ post, onPress }: PostProps) => {
         contentFit="cover"
         transition={1000}
       >
-        <Text style={textStyles.body}>{post.title}</Text>
-        <Text>{post.description}</Text>
+        <View style={styles.textContainer}>
+          <Text style={textStyles.body}>{post.title}</Text>
+          <Text>{post.description}</Text>
+        </View>
       </ImageBackground>
     </Pressable>
   );
 };
 
 const styles = StyleSheet.create({
+  textContainer: {
+    backgroundColor: 'rgba( 255, 255, 255, 0.4)',
+    borderRadius: 5,
+    padding: 5,
+  },
   container: {
     height: getHeightStyle(70),
     flex: 1,

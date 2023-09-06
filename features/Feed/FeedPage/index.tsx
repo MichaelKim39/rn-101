@@ -10,9 +10,7 @@ const FeedPage = () => {
 
   return (
     <View style={styles.container}>
-      <View>
-        <Text style={textStyles.head}>My Feed</Text>
-      </View>
+      <Text style={textStyles.head}>My Feed</Text>
       <FlashList
         data={posts}
         renderItem={({ item: post }) => (
