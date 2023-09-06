@@ -1,9 +1,12 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+export const getHeightStyle = (percentage: number) => {
+  return Dimensions.get('screen').height * percentage/100
+}
 
 export const layoutStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffe7d9',
     alignItems: 'center',
     justifyContent: 'center',
   },
